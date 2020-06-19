@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Richards International Online Book Store</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Book Store, website design, software development">
+  <meta name="author" content="Richards International Online Book Store">
+  <meta name="keywords" content="Book Store">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <style>
+  .login form {
+
+    background-color:    	#A9A9A9;
+    border-radius: 30px;
+    margin-right: 5px;
+  }
+
+  .login input[type=text],
+  input[type=password] {
+    width: 50%;
+    padding: 12px 12px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+    border: 0.5px solid #ccc;
+
+    box-sizing: border-box;
+  }
+
+  .login button {
+    background-color: #DC143C;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 180px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .login button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #DC143C;
+  }
+
+  /* .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  } */
+  /*
+  .login img.avatar {
+  width: 40%;
+  border-radius: 50%;
+  } */
+
+  .container {
+    padding: 5px;
+  }
+
+  .login span.psw {
+    float: right;
+    padding-top: 16px;
+
+  }
+</style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="header_nav">
+        <a href="loginAdmin.html" style="color:#FFFFFF; font-size: 15px;">Admin</a>
+        <a href="login.html" style="color:#FFFFFF; font-size: 15px;">Login</a>
+        <a href="cart.php"><img src="images/cart.png" alt="cart image" /></a>
+      </div>
+      <div id="header_title">
+        <p>Login</p>
+      </div>
+    </div>
+
+    <div id="content" style="height: 100%;">
+      <div id="left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.php">Books</a></li>
+          <li><a href="bestSellers.php">Best Sellers</a></li>
+        </ul>
+      </div>
+
+      <div id="right">
+        <div class="content_right_section">
+          <h1>Categories</h1>
+          <ul>
+            <li><a href="#">Men's Fashion</a></li>
+            <li><a href="#">Women's Fashion</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Mobiles, Computers</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Kitchen</a></li>
+            <li><a href="#">Pets</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Grocery</a></li>
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Novels</a></li>
+          </ul>
+          <h1>Contact Us</h1>
+          <ul>
+            <li>Richards International Co.(Pvt)Ltd</li>
+            <li>64,Perakumba Street Kurunegala Sri Lanka</li>
+            <li><a title="Use alt + click to follow the link" href="mailto:64s@richards.lk">64s@richards.lk</a></li>
+            <li><a title="Use alt + click to follow the link" href="mailto:sales@richards.lk">sales@richards.lk</a></li>
+            <li><a title="Use alt + click to follow the link" href="tel:+94372222547">Tel : +94 37 222 2547</a></li>
+            <li><a title="Use alt + click to follow the link" href="tel:+94372222547">Fax : +94 37 469 0701</a></li>
+            <li>Facebook: Richards.Books</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="center">
+        <div class="login">
+          <form action="login.php" method="post" onsubmit="return enter()">
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" name="username" id="username"></br>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" name="password" id="password"></br>
+              <!-- <input type="submit" value="Login"> -->
+              <button type="submit" value="Login">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+              <button type="button" class="cancelbtn">Cancel</button>
+              <a class="psw" href="forgot_password.html">Forgot password?</a></br></br>
+              <a href="register.html" style="text-align:center;">Not a member? &emsp;Register as a member.</a>
+            </div>
+          </form>
+          <script type="text/javascript">
+          function enter()
+          {
+            var username = document.getElementById("username").value; //get the username from the form
+            var password = document.getElementById("password").value;
+            var regex = /^[/s]+$/; //Declare a regular expression that determines if there is a space before and after the username
+            if (regex.test(username)) //Determine if there is a space before or after the user name or if the username is empty
+            {
+              alert("Username or Password format is wrong.");
+              return false;
+            }
+            if (username.length == 0) //Determine if there is a space before or after the user name or if the username is empty
+            {
+              alert("Username cannot be blank.");
+              return false;
+            }
+            if (regex.test(password)) //Same as above
+            {
+              alert("Username or Password format is wrong.");
+              return false;
+            }
+            if (password.length == 0) //Same as above
+            {
+              alert("Password cannot be blank.");
+              return false;
+            }
+            return true;
+          }
+          function register()
+          {
+            window.location.href = "register.html"; //Jump to the registration page
+          }
+          </script>
+        </div>
+      </div>
+      <!-- footer -->
+      <div id="footer">
+        Copyright &copy; 2018 Richards International Co.(Pvt) Ltd. All Rights Reserved.<br>
+        This document was last modified on:
+        <script>
+        document.write(document.lastModified);
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

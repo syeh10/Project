@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Richards International Online Book Store</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Book Store, website design, software development">
+  <meta name="author" content="Richards International Online Book Store">
+  <meta name="keywords" content="Book Store">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <style>
+  .bill_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+
+  .bill_address {
+    flex: 50%;
+  }
+
+  .bill_address {
+    width: 80%;
+    padding: 5px 16px;
+    margin-top: 20px;
+    margin-left: 7%;
+    background-color:  	 	#A9A9A9;
+    border-radius: 30px;
+  }
+
+  input[type=text] {
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1.5px solid  	#DC143C;
+    border-radius: 3px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    display: block;
+    color: #800000;
+    font-size:14px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+
+  .btn {
+    background-color: 	#DC143C;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "Times New Roman", Verdana, Arial, san-serif;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+</style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- header -->
+    <div id="header">
+      <div id="header_nav">
+        <a href="loginAdmin.html" style="color:#FFFFFF; font-size: 15px;">Admin</a>
+        <a href="login.html" style="color:#FFFFFF; font-size: 15px;">Login</a>
+        <a href="cart.php"><img src="images/cart.png" alt="cart image" /></a>
+      </div>
+      <div id="header_title">
+        <p>Payment</p>
+        <a href="cart.php"><img src="images/cart.png" alt="image" />Cart</a>
+      </div>
+    </div>
+    <!-- content -->
+    <div id="content">
+      <!-- content left -->
+      <div id="left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.php">Books</a></li>
+          <li><a href="bestSellers.php">Best Sellers</a></li>
+        </ul>
+      </div>
+      <!-- content right -->
+      <div id="right">
+        <div class="content_right_section">
+          <h1>Categories</h1>
+          <ul>
+            <li><a href="#">Men's Fashion</a></li>
+            <li><a href="#">Women's Fashion</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Mobiles, Computers</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Kitchen</a></li>
+            <li><a href="#">Pets</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Grocery</a></li>
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Novels</a></li>
+          </ul>
+          <h1>Contact Us</h1>
+          <ul>
+            <li>Richards International Co.(Pvt)Ltd</li>
+            <li>64,Perakumba Street Kurunegala Sri Lanka</li>
+            <li><a title="Use alt + click to follow the link" href="mailto:64s@richards.lk">64s@richards.lk</a></li>
+            <li><a title="Use alt + click to follow the link" href="mailto:sales@richards.lk">sales@richards.lk</a></li>
+            <li><a title="Use alt + click to follow the link" href="tel:+94372222547">Tel : +94 37 222 2547</a></li>
+            <li><a title="Use alt + click to follow the link" href="tel:+94372222547">Fax : +94 37 469 0701</a></li>
+            <li>Facebook: Richards.Books</li>
+          </ul>
+        </div>
+      </div>
+      <!-- content center -->
+      <div id="center">
+        <div class="bill_address">
+          <h3 style="color:#800000;">Billing Address</h3>
+          <label>Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+          <input type="text" id="email" name="email" placeholder="john@example.com">
+          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+          <label for="city"><i class="fa fa-institution"></i> City</label>
+          <input type="text" id="city" name="city" placeholder="New York">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="NY">
+          <label for="zip">Zip</label>
+          <input type="text" id="zip" name="zip" placeholder="10001">
+        </div>
+
+        <div class="bill_address">
+          <h3 style="color:#800000;">Payment</h3>
+          <label for="fname">Accepted Cards</label>
+          <div class="cards">
+            <img src="images/card1.png" alt="Cards image" />
+            <img src="images/card2.png" alt="Cards image" />
+            <img src="images/card3.png" alt="Cards image" />
+            <img src="images/card4.png" alt="Cards image" />
+          </div>
+          <label for="cname">Name on Card</label>
+          <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+          <label for="ccnum">Credit card number</label>
+          <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+          <label for="expmonth">Exp Month</label>
+          <input type="text" id="expmonth" name="expmonth" placeholder="September">
+          <label for="expyear">Exp Year</label>
+          <input type="text" id="expyear" name="expyear" placeholder="2018">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="352">
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+        </div>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </div>
+      <!-- footer -->
+      <div id="footer">
+        Copyright &copy; 2018 Richards International Co.(Pvt) Ltd. All Rights Reserved.<br>
+        This document was last modified on:
+        <script>
+        document.write(document.lastModified);
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
