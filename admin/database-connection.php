@@ -1,15 +1,14 @@
 <?php
 // $con = mysqli_connect("localhost","root","","")  or die("Could not connect mysql: " . mysqli_error() );
-$con = mysqli_connect("infotech.scu.edu.au","syeh10","22862541","") or die("Could not connect mysql: " . mysqli_error() );
+$con = mysqli_connect("confidential","confidential","confidential","") or die("Could not connect mysql: " . mysqli_error() );
 
-// $dbName = "ISY10222RIOBS";
 $dbName = "syeh10ISY10222RIOBS";
 mysqli_select_db($con, $dbName)or die("Could not find database: " . mysqli_error() ) ;
 
 class DBController {
-	private $host = "infotech.scu.edu.au";
-	private $user = "syeh10";
-	private $password = "22862541";
+	private $host = "confidential";
+	private $user = "confidential";
+	private $password = "confidential";
 	private $database = "syeh10ISY10222RIOBS";
 	// private $host = "localhost";
 	// private $user = "root";
